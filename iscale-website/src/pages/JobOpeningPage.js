@@ -77,8 +77,8 @@ const JobOpeningPage = ({ setCurrentPage }) => {
   return (
     <div style={{ background: '#f8f9fa', minHeight: '100vh' }}>
       {/* Hero Section */}
-      <section style={{ 
-        height: 350, 
+      <section className="section-padding" style={{ 
+        minHeight: 350, 
         background: 'linear-gradient(rgba(135, 116, 255, 0.4), rgba(255, 255, 255, 0.1)), url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop") center/cover',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         color: '#333', textAlign: 'center', position: 'relative'
@@ -88,7 +88,7 @@ const JobOpeningPage = ({ setCurrentPage }) => {
           <span style={{ margin: '0 8px' }}>›</span>
           <span>Job Opening</span>
         </div>
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 48, fontWeight: 800, marginBottom: 40 }}>Job Opening</h1>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 8vw, 48px)', fontWeight: 800, marginBottom: 40, padding: '0 20px' }}>Job Opening</h1>
 
         {/* Filter Bar */}
         <div style={{ 

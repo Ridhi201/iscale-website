@@ -51,13 +51,13 @@ const EventsPage = () => {
   return (
     <div style={{ minHeight: '80vh', background: '#f9f9fb' }}>
       {/* Header */}
-      <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 100%)', color: '#fff', padding: '60px 0' }}>
+      <div style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 100%)', color: '#fff' }} className="section-padding">
         <div className="container" style={{ textAlign: 'center' }}>
           <span style={{ background: 'rgba(255,255,255,0.1)', color: '#fff', padding: '4px 16px', borderRadius: 100, fontSize: 12, fontWeight: 700 }}>UPCOMING</span>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 48, fontWeight: 800, marginTop: 12, marginBottom: 12 }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 8vw, 48px)', fontWeight: 800, marginTop: 12, marginBottom: 12, padding: '0 20px' }}>
             Events & <span style={{ color: '#ff6b6b' }}>Webinars</span>
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18 }}>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(14px, 4vw, 18px)', padding: '0 20px' }}>
             Learn from industry leaders. Join our free and paid events.
           </p>
         </div>

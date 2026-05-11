@@ -313,25 +313,25 @@ const CourseDetailPage = ({ setCurrentPage, selectedCourse }) => {
             gap: isMobile ? 32 : 40, 
             alignItems: 'center' 
           }}>
-            <div style={{ flex: 1 }}>
-              <div style={{ color: '#888', fontSize: isMobile ? 12 : 14, marginBottom: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
+            <div style={{ flex: 1, textAlign: isMobile ? 'center' : 'left' }}>
+              <div style={{ color: '#888', fontSize: isMobile ? 12 : 14, marginBottom: 16, display: 'flex', alignItems: 'center', gap: 8, justifyContent: isMobile ? 'center' : 'flex-start' }}>
                 Home <ChevronRight size={14} /> {course.category}
               </div>
               <h1 style={{ fontSize: isMobile ? '28px' : 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#1a1a2e', marginBottom: 20, lineHeight: 1.2 }}>
                 {course.title}
               </h1>
-              <p style={{ fontSize: isMobile ? 14 : 16, color: '#555', lineHeight: 1.8, marginBottom: 24, maxWidth: 650 }}>
+              <p style={{ fontSize: isMobile ? 14 : 16, color: '#555', lineHeight: 1.8, marginBottom: 24, maxWidth: 650, margin: isMobile ? '0 auto 24px' : '0 0 24px' }}>
                 {course.description}
               </p>
               
-              <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 24, flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', justifyContent: isMobile ? 'center' : 'flex-start' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: '#fff', padding: '6px 16px', borderRadius: 100, border: '1px solid #ffebee', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
                   <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 700 }}>Popular</span>
                   <span style={{ color: '#777', fontSize: 11 }}>({course.views} No Of Views)</span>
                 </div>
               </div>
-
-              <div style={{ display: 'flex', gap: isMobile ? 20 : 30, color: '#666', fontSize: isMobile ? 13 : 14, flexWrap: 'wrap' }}>
+              
+              <div style={{ display: 'flex', gap: isMobile ? 20 : 30, color: '#666', fontSize: isMobile ? 13 : 14, flexWrap: 'wrap', justifyContent: isMobile ? 'center' : 'flex-start' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <Clock size={16} /> {isMobile ? '' : 'Last updated'} {course.updated}
                 </div>
@@ -525,13 +525,14 @@ const CourseDetailPage = ({ setCurrentPage, selectedCourse }) => {
               onClick={() => setCurrentPage('login')}
               style={{
               background: 'linear-gradient(to right, #8b0000, #ff0000)',
-              color: '#fff', padding: isMobile ? '12px 24px' : '14px 40px', borderRadius: 8,
-              fontSize: isMobile ? 14 : 16, fontWeight: 700, display: 'flex', alignItems: 'center', gap: 8,
+              color: '#fff', padding: isMobile ? '10px 20px' : '14px 40px', borderRadius: 8,
+              fontSize: isMobile ? 13 : 16, fontWeight: 700, display: 'flex', alignItems: 'center', gap: 8,
               boxShadow: '0 4px 15px rgba(237,28,36,0.3)',
               flex: isMobile ? 1 : 'none',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              whiteSpace: 'nowrap'
             }}>
-              Enroll Now <ArrowRight size={isMobile ? 16 : 20} />
+              Enroll Now <ArrowRight size={isMobile ? 14 : 20} />
             </button>
           </div>
         </div>

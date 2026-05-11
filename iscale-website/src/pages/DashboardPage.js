@@ -54,11 +54,11 @@ const Sidebar = ({ active, setActive, setCurrentPage, onLogout, isOpen, setIsOpe
     boxShadow: '0 2px 16px rgba(0,0,0,0.07)',
     border: '1px solid #eee', padding: '16px 8px',
     position: isTablet ? 'fixed' : 'sticky',
-    top: isTablet ? 0 : 90,
+    top: 0,
     left: isOpen ? 0 : -260,
     height: isTablet ? '100vh' : 'auto',
     zIndex: 2000,
-    transition: 'left 0.3s ease',
+    transition: 'left 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
     overflowY: 'auto'
   };
 

@@ -67,7 +67,7 @@ const RegisterPage = ({ setCurrentPage, onRegisterSuccess }) => {
   };
 
   return (
-    <div style={{ minHeight: '90vh', background: 'var(--gradient-hero)', display: 'flex', alignItems: 'center', padding: '60px 0' }}>
+    <div style={{ minHeight: '90vh', background: 'var(--gradient-hero)', display: 'flex', alignItems: 'center' }} className="section-padding">
       <div className="container about-grid">
         {/* Illustration */}
         <div style={{ animation: 'fadeUp 0.6s 0.2s ease both' }}>

@@ -12,10 +12,10 @@ const Hero = ({ setCurrentPage }) => {
   };
 
   return (
-    <section style={{ background: 'var(--gradient-hero)', padding: '80px 0 60px', minHeight: '85vh', display: 'flex', alignItems: 'center' }}>
+    <section className="section-padding" style={{ background: 'var(--gradient-hero)', minHeight: '85vh', display: 'flex', alignItems: 'center' }}>
       <div className="container hero-grid">
         {/* Left content */}
-        <div style={{ animation: 'fadeUp 0.7s ease forwards' }}>
+        <div style={{ animation: 'fadeUp 0.7s ease forwards', textAlign: 'inherit' }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 8,
             background: '#fff', borderRadius: 100, padding: '8px 18px',
@@ -31,11 +31,11 @@ const Hero = ({ setCurrentPage }) => {
             Readiness.
           </h1>
 
-          <p style={{ color: '#555', fontSize: 17, lineHeight: 1.75, marginBottom: 36, maxWidth: 520 }}>
+          <p style={{ color: '#555', fontSize: 17, lineHeight: 1.75, marginBottom: 36, maxWidth: 520, marginLeft: 'auto', marginRight: 'auto' }} className="desktop-margin-left-0">
             In India, millions of professionals and college graduates lack affordable access to industry-aligned education. iScale aims to democratize it, blending quality with affordability to create a widespread impact.
           </p>
 
-          <div style={{ display: 'flex', gap: 16 }}>
+          <div style={{ display: 'flex', gap: 16, justifyContent: 'center' }} className="desktop-justify-start">
             <button
               onClick={() => setCurrentPage('courses')}
               style={{
@@ -183,7 +183,7 @@ const Hero = ({ setCurrentPage }) => {
 
 /* ── About iScale Learning ── */
 const AboutSection = () => (
-  <section className="reveal" style={{ padding: '80px 0', background: '#fff' }}>
+  <section className="reveal section-padding" style={{ background: '#fff' }}>
     <div className="container about-grid">
       {/* Video card */}
       <div style={{
@@ -304,7 +304,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="reveal" style={{ padding: '80px 0', background: '#f9f9f9', overflow: 'hidden' }}>
+    <section className="reveal section-padding" style={{ background: '#f9f9f9', overflow: 'hidden' }}>
       <div className="container" style={{ position: 'relative' }}>
         <div style={{ textAlign: 'center', marginBottom: 12 }}>
           <span style={{ background: '#ffe5e8', color: 'var(--red)', padding: '4px 16px', borderRadius: 100, fontSize: 12, fontWeight: 700 }}>THE ISCALE</span>
@@ -409,7 +409,7 @@ const LatestUpdates = () => {
   };
 
   return (
-    <section className="reveal" style={{ padding: '80px 0', background: '#f8f9fa' }}>
+    <section className="reveal section-padding" style={{ background: '#f8f9fa' }}>
       <div className="container" style={{ position: 'relative' }}>
         <div style={{ textAlign: 'center', marginBottom: 12 }}>
           <span style={{ background: '#eef2ff', color: 'var(--red)', padding: '6px 16px', borderRadius: 100, fontSize: 12, fontWeight: 700 }}>EXPLORE OPPORTUNITIES</span>
@@ -520,7 +520,7 @@ const coursesData = [
 ];
 
 const PopularCourses = ({ setCurrentPage, onCourseSelect }) => (
-  <section className="reveal" style={{ padding: '80px 0', background: '#f4f4f8' }}>
+  <section className="reveal section-padding" style={{ background: '#f4f4f8' }}>
     <div className="container">
       <div style={{ textAlign: 'center', marginBottom: 12 }}>
         <span style={{ background: '#ffe5e8', color: 'var(--red)', padding: '4px 16px', borderRadius: 100, fontSize: 12, fontWeight: 700 }}>TOP POPULAR COURSES</span>

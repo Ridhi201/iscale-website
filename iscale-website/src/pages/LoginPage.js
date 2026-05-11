@@ -49,11 +49,11 @@ const LoginPage = ({ setCurrentPage, onLoginSuccess }) => {
   };
 
   return (
-    <div style={{ minHeight: '90vh', background: 'var(--gradient-hero)', display: 'flex', alignItems: 'center', padding: '60px 0' }}>
+    <div style={{ minHeight: '90vh', background: 'var(--gradient-hero)', display: 'flex', alignItems: 'center' }} className="section-padding">
       <div className="container about-grid">
         {/* Form */}
         <div style={{
-          background: '#fff', borderRadius: 24, padding: 48,
+          background: '#fff', borderRadius: 24, padding: 'clamp(24px, 5vw, 48px)',
           boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
           animation: 'fadeUp 0.6s ease forwards'
         }}>

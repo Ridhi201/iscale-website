@@ -31,13 +31,13 @@ const SuccessStoryPage = ({ setCurrentPage }) => {
   return (
     <div style={{ background: '#f8f9fa', minHeight: '100vh' }}>
       {/* Hero Section */}
-      <section style={{ 
-        height: 350, 
+      <section className="section-padding" style={{ 
+        minHeight: 350, 
         background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop") center/cover',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         color: '#fff', textAlign: 'center'
       }}>
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 56, fontWeight: 800, marginBottom: 12 }}>Success Stories</h1>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 8vw, 56px)', fontWeight: 800, marginBottom: 12, padding: '0 20px' }}>Success Stories</h1>
         <div style={{ fontSize: 14, opacity: 0.8 }}>
           <span onClick={() => setCurrentPage('home')} style={{ cursor: 'pointer' }}>Home</span>
           <span style={{ margin: '0 10px' }}>›</span>
@@ -46,8 +46,8 @@ const SuccessStoryPage = ({ setCurrentPage }) => {
 
         {/* Search Bar */}
         <div style={{ 
-          marginTop: 40, background: '#fff', padding: '6px 12px', borderRadius: 24, 
-          display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8, width: '90%', maxWidth: 700,
+          marginTop: 40, background: '#fff', padding: '12px', borderRadius: 24, 
+          display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12, width: '90%', maxWidth: 700,
           boxShadow: '0 10px 40px rgba(0,0,0,0.2)'
         }}>
           <input 
@@ -55,26 +55,28 @@ const SuccessStoryPage = ({ setCurrentPage }) => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             style={{ 
-              flex: '1 1 200px', border: 'none', padding: '12px', fontSize: 15, color: '#333',
-              background: 'transparent', minWidth: '150px'
+              flex: '1 1 200px', border: 'none', padding: '8px 12px', fontSize: 15, color: '#333',
+              background: 'transparent'
             }} 
           />
-          <button style={{ 
-            background: 'var(--red)', color: '#fff', border: 'none', 
-            width: 44, height: 44, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center'
-          }}>
-            <Search size={20} />
-          </button>
-          <button 
-            onClick={() => setSearchTerm('')}
-            style={{ 
-              background: '#000', color: '#fff', border: 'none', padding: '0 24px',
-              height: 44, borderRadius: 50, fontSize: 14, fontWeight: 700,
-              display: 'flex', alignItems: 'center', gap: 8, flex: '1 1 auto', justifyContent: 'center'
-            }}
-          >
-            <RotateCcw size={16} /> Reset
-          </button>
+          <div style={{ display: 'flex', gap: 8, width: '100%', justifyContent: 'flex-end', flex: '1 1 auto' }} className="desktop-flex-initial">
+            <button style={{ 
+              background: 'var(--red)', color: '#fff', border: 'none', 
+              width: 44, height: 44, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+            }}>
+              <Search size={20} />
+            </button>
+            <button 
+              onClick={() => setSearchTerm('')}
+              style={{ 
+                background: '#000', color: '#fff', border: 'none', padding: '0 20px',
+                height: 44, borderRadius: 50, fontSize: 14, fontWeight: 700,
+                display: 'flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap'
+              }}
+            >
+              <RotateCcw size={16} /> Reset
+            </button>
+          </div>
         </div>
       </section>
 
