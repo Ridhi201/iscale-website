@@ -1,0 +1,11 @@
+node_modules/
+build/
+.env
+.DS_Store
+.antigravity/
+brain/
+artifacts/
+scratch/
+implementation_plan.md
+task.md
+walkthrough.md
