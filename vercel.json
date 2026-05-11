@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd iscale-website && npm install && npm run build",
+  "outputDirectory": "iscale-website/build",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
